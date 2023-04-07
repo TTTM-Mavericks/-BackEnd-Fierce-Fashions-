@@ -1,6 +1,6 @@
-package com.mtlt.service.impl;
+package com.ff.service.impl;
 
-import com.mtlt.service.UserService;
+import com.ff.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

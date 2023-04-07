@@ -1,4 +1,4 @@
-package com.mtlt.entity;
+package com.ff.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
