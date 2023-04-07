@@ -64,6 +64,7 @@ public class UserEntity implements UserDetails {
         this.address = address;
         this.password = password;
         this.role = role;
+        this.is_activated = true;
     }
 
     @Override
