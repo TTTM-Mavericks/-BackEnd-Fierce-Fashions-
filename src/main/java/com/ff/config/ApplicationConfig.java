@@ -1,6 +1,7 @@
 package com.ff.config;
 
 
+import com.ff.entity.UserEntity;
 import com.ff.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -23,8 +24,15 @@ public class ApplicationConfig {
     @Bean
     public UserDetailsService userDetailsService()
     {
-        return username -> userRepository.findByUsername(username)
-                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+        return username ->
+        {
+            UserEntity user =  userRepository.findUserByUsername(username);
+            if (user != null)
+            {
+                return user;
+            }
+            throw new UsernameNotFoundException("Username not found");
+        };
     }
 
     @Bean
