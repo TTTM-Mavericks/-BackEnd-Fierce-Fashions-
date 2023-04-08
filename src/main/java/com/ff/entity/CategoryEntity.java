@@ -37,6 +37,12 @@ public class CategoryEntity {
     List<ProductEntity> product_cate;
 
     @Lob
-    @Column(columnDefinition = "bytea")
+    @Column(name = "image", columnDefinition = "bytea")
     private byte[] image;
+
+    public CategoryEntity(String name) {
+        this.name = name;
+        this.image = null;
+        this.status = Status.ACTIVE;
+    }
 }
