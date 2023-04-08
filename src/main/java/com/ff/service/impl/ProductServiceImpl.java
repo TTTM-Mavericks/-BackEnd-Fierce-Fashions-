@@ -7,6 +7,8 @@ import com.ff.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ProductServiceImpl implements ProductService {
     @Autowired
@@ -25,5 +27,20 @@ public class ProductServiceImpl implements ProductService {
             productRepository.delete(product);
             return product;
         }
+    }
+
+    @Override
+    public List<ProductEntity> listAllProduct() {
+        return productRepository.findAll();
+    }
+
+    @Override
+    public ProductEntity findByName(String name) {
+        return productRepository.findByName(name);
+    }
+
+    @Override
+    public List<ProductEntity> findByCategory(String categoryName) {
+        return productRepository.findByCategory(categoryName);
     }
 }
