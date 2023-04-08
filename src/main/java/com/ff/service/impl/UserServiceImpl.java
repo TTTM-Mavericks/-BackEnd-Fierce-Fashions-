@@ -12,23 +12,29 @@ import org.springframework.stereotype.Service;
 public class UserServiceImpl implements UserService {
     @Autowired
     UserRepository userRepository;
+
     @Override
     public UserEntity checkLogin(String key, String password) {
         UserEntity user = userRepository.findByUsernameAndPassword(key, password);
-        if(user == null){
+        if (user == null) {
             user = userRepository.findByEmailAndPassword(key, password);
-            if(user == null){
+            if (user == null) {
                 user = userRepository.findByPhoneAndPassword(key, password);
-                if(user == null){
-                    return null;
-                } else {
-                    return user;
-                }
+                return user;
             } else {
                 return user;
             }
         } else {
             return user;
         }
+    }
+
+    @Override
+    public UserEntity updateUser(UserEntity user) {
+        if (user != null) {
+            userRepository.save(user);
+            return user;
+        } else
+            return null;
     }
 }

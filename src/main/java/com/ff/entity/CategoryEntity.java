@@ -33,4 +33,8 @@ public class CategoryEntity {
                     table = "products")
     )
     List<ProductEntity> product_cate;
+
+    @Lob
+    @Column(columnDefinition = "bytea")
+    private byte[] image;
 }

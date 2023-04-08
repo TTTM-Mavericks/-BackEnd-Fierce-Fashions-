@@ -5,5 +5,7 @@ import com.ff.entity.UserEntity;
 import java.util.List;
 
 public interface AdminService {
-    public List<UserEntity> getAllCustomer();
+    List<UserEntity> getAllCustomer();
+    UserEntity banUser(String username);
+    UserEntity unbanUser(String username);
 }
