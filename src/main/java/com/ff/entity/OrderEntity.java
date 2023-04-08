@@ -1,5 +1,6 @@
 package com.ff.entity;
 
+import com.ff.entity.enum_pkg.Status;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -32,10 +33,8 @@ public class OrderEntity {
 
     private String shipAddress;
 
-    private int orderStatus;
-    // 1 Completed
-    // 2 Processed
-    // 3 Cancelled
+    @Enumerated(EnumType.STRING)
+    private Status status_Order;
 
     private Double totalPrice;
 

@@ -5,6 +5,7 @@ import com.ff.repository.UserRepository;
 import com.ff.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -29,7 +30,9 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+
     @Override
+    @Cacheable(cacheNames = "updateUser")
     public UserEntity updateUser(UserEntity user) {
         if (user != null) {
             userRepository.save(user);

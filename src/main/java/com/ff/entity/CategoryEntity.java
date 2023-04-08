@@ -1,5 +1,6 @@
 package com.ff.entity;
 
+import com.ff.entity.enum_pkg.Status;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -19,7 +20,8 @@ public class CategoryEntity {
 
     private String name;
 
-    private Boolean isEnable;
+    @Enumerated(EnumType.STRING)
+    private Status status;
 
     // one product belong to many category
     // one category has many product

@@ -1,5 +1,6 @@
 package com.ff.entity;
 
+import com.ff.entity.enum_pkg.TypeOfPayment;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

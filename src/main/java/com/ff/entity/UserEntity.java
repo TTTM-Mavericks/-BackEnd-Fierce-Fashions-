@@ -1,5 +1,7 @@
 package com.ff.entity;
 
+import com.ff.entity.enum_pkg.RoleEntity;
+import com.ff.entity.enum_pkg.Status;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -42,7 +44,8 @@ public class UserEntity implements UserDetails {
 
     private String address;
 
-    private boolean is_activated;
+    @Enumerated(EnumType.STRING)
+    private Status status_account;
 
     private String password;
 
@@ -64,7 +67,7 @@ public class UserEntity implements UserDetails {
         this.address = address;
         this.password = password;
         this.role = role;
-        this.is_activated = true;
+        this.status_account = Status.ACTIVE;
     }
 
     @Override

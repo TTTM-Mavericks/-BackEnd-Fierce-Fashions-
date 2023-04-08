@@ -1,5 +1,6 @@
 package com.ff.entity;
 
+import com.ff.entity.enum_pkg.Status;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -29,7 +30,9 @@ public class ProductEntity {
 
     private LocalDateTime createdDate;
     private LocalDateTime updatedDate;
-    private Boolean isDeleted;
+
+    @Enumerated(EnumType.STRING)
+    private Status status_product;
     private Double rate;
 
     @OneToMany(mappedBy = "product_comment")

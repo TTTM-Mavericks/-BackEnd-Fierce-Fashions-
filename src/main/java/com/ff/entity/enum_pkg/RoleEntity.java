@@ -1,4 +1,4 @@
-package com.ff.entity;
+package com.ff.entity.enum_pkg;
 
 public enum RoleEntity {
     CUSTOMER,   // normal user

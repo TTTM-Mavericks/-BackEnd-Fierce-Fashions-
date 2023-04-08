@@ -1,5 +1,6 @@
 package com.ff.entity;
 
+import com.ff.entity.enum_pkg.Status;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,5 +22,6 @@ public class InvoiceEntity {
     @JoinColumn(name = "payment_id", referencedColumnName = "id")
     private PaymentEntity invoice_payment;
 
-    private Boolean status_invoice;
+    @Enumerated(EnumType.STRING)
+    private Status status_invoice;
 }
