@@ -30,6 +30,8 @@ public class SecurityConfigure {
                 .authorizeHttpRequests()
                 .requestMatchers("/auth/**")
                 .permitAll()
+                .requestMatchers("/swagger-ui/**")
+                .permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()
