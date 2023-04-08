@@ -1,5 +1,7 @@
 package com.ff.controller;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ff.entity.UserEntity;
 import com.ff.service.impl.UserServiceImpl;
 import jakarta.websocket.server.PathParam;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
     @Autowired
     UserServiceImpl userService;
+    private static final ObjectMapper objectMapper = new ObjectMapper();
 
     @GetMapping("/login")
     public ResponseEntity<UserEntity> checkLogin(@PathParam("key") String key, @PathParam("password") String password) {
@@ -21,5 +24,15 @@ public class UserController {
             return new ResponseEntity<>(user, HttpStatus.FOUND);
         else
             return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+    }
+
+    @GetMapping("/updateInfor")
+    public ResponseEntity<UserEntity> updateInfor(@RequestBody String json) throws JsonProcessingException {
+        UserEntity user = objectMapper.readValue(json, UserEntity.class);
+        if(user != null){
+            return new ResponseEntity<>(userService.updateUser(user), HttpStatus.OK);
+        } else {
+            return null;
+        }
     }
 }
