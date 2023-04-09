@@ -43,4 +43,15 @@ public class ProductEntity {
 
     @OneToMany(mappedBy = "product_detail")
     List<OrderDetailsEntity> details;
+
+    public ProductEntity(String name, String description, Double price, Long quantity, byte[] image, LocalDateTime createdDate, LocalDateTime updatedDate) {
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.quantity = quantity;
+        this.image = image;
+        this.createdDate = createdDate;
+        this.updatedDate = updatedDate;
+        this.status_product = Status.ACTIVE;
+    }
 }

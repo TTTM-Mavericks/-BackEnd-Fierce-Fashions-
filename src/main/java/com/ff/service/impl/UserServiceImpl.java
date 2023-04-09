@@ -38,8 +38,45 @@ public class UserServiceImpl implements UserService {
     @Cacheable(cacheNames = "updateUser")
     public UserEntity updateUser(UserEntity user) {
         if (user != null) {
-            userRepository.save(user);
-            return user;
+            UserEntity oldUser = userRepository.findById(user.getId()).get();
+            if (user.getUsername() == null
+                    || user.getUsername().isBlank()
+                    || user.getUsername().isEmpty()) {
+                user.setUsername(oldUser.getUsername());
+            }
+            if (user.getPassword() == null
+                    || user.getPassword().isBlank()
+                    || user.getPassword().isEmpty()) {
+                user.setPassword(oldUser.getPassword());
+            }
+            if (user.getAddress() == null
+                    || user.getAddress().isBlank()
+                    || user.getAddress().isEmpty()) {
+                user.setAddress(oldUser.getAddress());
+            }
+            if (user.getEmail() == null
+                    || user.getEmail().isBlank()
+                    || user.getEmail().isEmpty()) {
+                user.setEmail(oldUser.getEmail());
+            }
+            if (user.getFirst_name() == null
+                    || user.getFirst_name().isBlank()
+                    || user.getFirst_name().isEmpty()) {
+                user.setFirst_name(oldUser.getFirst_name());
+            }
+            if (user.getLast_name() == null
+                    || user.getLast_name().isBlank()
+                    || user.getLast_name().isEmpty()) {
+                user.setLast_name(oldUser.getLast_name());
+            }
+            if (user.getPhone() == null
+                    || user.getPhone().isBlank()
+                    || user.getPhone().isEmpty()) {
+                user.setPhone(oldUser.getPhone());
+            }
+            user.setRole(oldUser.getRole());
+            user.setStatus_account(oldUser.getStatus_account());
+            return userRepository.save(user);
         } else
             return null;
     }
@@ -53,7 +90,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserEntity banUser(String username) {
         UserEntity user = userRepository.findUserByUsername(username);
-        if(user != null) {
+        if (user != null) {
             user.setStatus_account(Status.INACTIVE);
             userRepository.save(user);
             return user;
@@ -64,7 +101,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserEntity unbanUser(String username) {
         UserEntity user = userRepository.findUserByUsername(username);
-        if(user != null) {
+        if (user != null) {
             user.setStatus_account(Status.ACTIVE);
             userRepository.save(user);
             return user;

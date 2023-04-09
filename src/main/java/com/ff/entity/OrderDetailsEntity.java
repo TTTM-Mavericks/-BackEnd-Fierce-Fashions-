@@ -29,4 +29,9 @@ public class OrderDetailsEntity {
     OrderEntity orders;
 
     private Long quantity;
+
+    public OrderDetailsEntity(ProductEntity product_detail, Long quantity) {
+        this.product_detail = product_detail;
+        this.quantity = quantity;
+    }
 }

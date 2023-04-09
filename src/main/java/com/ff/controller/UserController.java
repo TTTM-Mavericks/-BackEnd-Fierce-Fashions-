@@ -2,8 +2,12 @@ package com.ff.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ff.entity.OrderEntity;
 import com.ff.entity.UserEntity;
-import com.ff.service.impl.UserServiceImpl;
+import com.ff.service.OrderService;
+import com.ff.service.UserService;
+import com.ff.utils.AddItemRequest;
+import com.ff.utils.OrderRequest;
 import jakarta.websocket.server.PathParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,7 +18,9 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/user")
 public class UserController {
     @Autowired
-    UserServiceImpl userService;
+    UserService userService;
+    @Autowired
+    OrderService orderService;
     private static final ObjectMapper objectMapper = new ObjectMapper();
 
     @GetMapping("/login")
@@ -34,5 +40,17 @@ public class UserController {
         } else {
             return null;
         }
+    }
+
+    @PostMapping("/makeAnOrder")
+    public ResponseEntity<OrderEntity> makeOrder(@RequestBody String json) throws JsonProcessingException {
+        OrderRequest orderDetail = objectMapper.readValue(json, OrderRequest.class);
+        return new ResponseEntity<>(orderService.makeOrder(orderDetail), HttpStatus.OK);
+    }
+
+    @PostMapping("/addNewItem")
+    public ResponseEntity<OrderEntity> addNewItem(@RequestBody String json) throws JsonProcessingException {
+        AddItemRequest newItem = objectMapper.readValue(json, AddItemRequest.class);
+        return new ResponseEntity<>(orderService.addNewItem(newItem), HttpStatus.OK);
     }
 }

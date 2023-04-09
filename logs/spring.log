@@ -323,3 +323,243 @@ java.lang.UnsatisfiedLinkError: C:\Program Files\apache-tomcat-10.0.27\bin\tcnat
 2023-04-09T16:04:21.556+07:00  INFO 20216 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-04-09T16:04:21.562+07:00  INFO 20216 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2023-04-09T16:04:23.232+07:00  INFO 20216 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-09T20:42:24.229+07:00  INFO 1296 --- [restartedMain] com.ff.FierceFashionsApplication         : Starting FierceFashionsApplication using Java 18.0.2.1 with PID 1296 (E:\Code(SpringBoot)\Repository\BackEnd-Fierce-Fashions\target\classes started by truonglam in E:\Code(SpringBoot)\Repository\BackEnd-Fierce-Fashions)
+2023-04-09T20:42:24.231+07:00  INFO 1296 --- [restartedMain] com.ff.FierceFashionsApplication         : No active profile set, falling back to 1 default profile: "default"
+2023-04-09T20:42:24.271+07:00  INFO 1296 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-09T20:42:24.271+07:00  INFO 1296 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-09T20:42:25.064+07:00  INFO 1296 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-09T20:42:25.136+07:00  INFO 1296 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63 ms. Found 4 JPA repository interfaces.
+2023-04-09T20:42:25.660+07:00  INFO 1296 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 6969 (http)
+2023-04-09T20:42:25.661+07:00  INFO 1296 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.35] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.1]
+2023-04-09T20:42:25.661+07:00  INFO 1296 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-04-09T20:42:25.682+07:00  INFO 1296 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-04-09T20:42:25.691+07:00  INFO 1296 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-09T20:42:25.692+07:00  INFO 1296 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-04-09T20:42:25.744+07:00  INFO 1296 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-09T20:42:25.744+07:00  INFO 1296 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1473 ms
+2023-04-09T20:42:25.842+07:00  INFO 1296 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-09T20:42:25.905+07:00  INFO 1296 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-09T20:42:26.158+07:00  INFO 1296 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-09T20:42:28.335+07:00  INFO 1296 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3ac927ee
+2023-04-09T20:42:28.337+07:00  INFO 1296 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-09T20:42:29.226+07:00  INFO 1296 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-04-09T20:42:37.748+07:00  INFO 1296 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-09T20:42:37.841+07:00  INFO 1296 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-09T20:42:38.659+07:00  WARN 1296 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-09T20:42:39.363+07:00  INFO 1296 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@39454060, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2e779964, org.springframework.security.web.context.SecurityContextHolderFilter@42fc8d3d, org.springframework.security.web.header.HeaderWriterFilter@535e81b8, com.ff.config.HeaderSettingFilter@353f5c59, org.springframework.security.web.authentication.logout.LogoutFilter@750fa5c5, com.ff.config.JwtAuthenticationFilter@4a2255a5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5158d76b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@130e4c2a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@52395a78, org.springframework.security.web.session.SessionManagementFilter@adc03e6, org.springframework.security.web.access.ExceptionTranslationFilter@ffa30e6, org.springframework.security.web.access.intercept.AuthorizationFilter@49bbd3c7]
+2023-04-09T20:42:40.683+07:00  INFO 1296 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-09T20:42:40.748+07:00  INFO 1296 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 6969 (http) with context path ''
+2023-04-09T20:42:40.781+07:00  INFO 1296 --- [restartedMain] com.ff.FierceFashionsApplication         : Started FierceFashionsApplication in 16.997 seconds (process running for 18.053)
+2023-04-09T20:47:09.104+07:00  INFO 1296 --- [http-nio-6969-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-09T20:47:09.105+07:00  INFO 1296 --- [http-nio-6969-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-09T20:47:09.108+07:00  INFO 1296 --- [http-nio-6969-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-04-09T20:47:10.364+07:00  INFO 1296 --- [http-nio-6969-exec-10] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 610 ms
+2023-04-09T21:03:18.442+07:00  INFO 1296 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-09T21:03:18.457+07:00  INFO 1296 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-09T21:03:20.482+07:00  INFO 1296 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-09T21:03:29.513+07:00  INFO 7900 --- [restartedMain] com.ff.FierceFashionsApplication         : Starting FierceFashionsApplication using Java 18.0.2.1 with PID 7900 (E:\Code(SpringBoot)\Repository\BackEnd-Fierce-Fashions\target\classes started by truonglam in E:\Code(SpringBoot)\Repository\BackEnd-Fierce-Fashions)
+2023-04-09T21:03:29.516+07:00  INFO 7900 --- [restartedMain] com.ff.FierceFashionsApplication         : No active profile set, falling back to 1 default profile: "default"
+2023-04-09T21:03:29.568+07:00  INFO 7900 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-09T21:03:29.569+07:00  INFO 7900 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-09T21:03:30.372+07:00  INFO 7900 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-09T21:03:30.451+07:00  INFO 7900 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 71 ms. Found 4 JPA repository interfaces.
+2023-04-09T21:03:31.020+07:00  INFO 7900 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 6969 (http)
+2023-04-09T21:03:31.020+07:00  INFO 7900 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.35] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.1]
+2023-04-09T21:03:31.020+07:00  INFO 7900 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-04-09T21:03:31.023+07:00  INFO 7900 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-04-09T21:03:31.031+07:00  INFO 7900 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-09T21:03:31.031+07:00  INFO 7900 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-04-09T21:03:31.087+07:00  INFO 7900 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-09T21:03:31.087+07:00  INFO 7900 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1517 ms
+2023-04-09T21:03:31.196+07:00  INFO 7900 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-09T21:03:31.251+07:00  INFO 7900 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-09T21:03:31.521+07:00  INFO 7900 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-09T21:03:33.682+07:00  INFO 7900 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@27b05b50
+2023-04-09T21:03:33.695+07:00  INFO 7900 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-09T21:03:34.616+07:00  INFO 7900 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-04-09T21:03:42.908+07:00  INFO 7900 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-09T21:03:42.933+07:00  INFO 7900 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-09T21:03:43.487+07:00  WARN 7900 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-09T21:03:44.160+07:00  INFO 7900 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@16deef0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4716136e, org.springframework.security.web.context.SecurityContextHolderFilter@1dc5214e, org.springframework.security.web.header.HeaderWriterFilter@61770db7, com.ff.config.HeaderSettingFilter@2d4d3fa4, org.springframework.security.web.authentication.logout.LogoutFilter@c0a4d4c, com.ff.config.JwtAuthenticationFilter@3b999fb1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5641f353, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3269fbe2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@789e95ea, org.springframework.security.web.session.SessionManagementFilter@78d5a0af, org.springframework.security.web.access.ExceptionTranslationFilter@633e54e4, org.springframework.security.web.access.intercept.AuthorizationFilter@14fa48e3]
+2023-04-09T21:03:44.380+07:00  INFO 7900 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-09T21:03:44.416+07:00  INFO 7900 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 6969 (http) with context path ''
+2023-04-09T21:03:44.423+07:00  INFO 7900 --- [restartedMain] com.ff.FierceFashionsApplication         : Started FierceFashionsApplication in 15.288 seconds (process running for 16.401)
+2023-04-09T21:07:03.237+07:00  INFO 7900 --- [http-nio-6969-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-09T21:07:03.238+07:00  INFO 7900 --- [http-nio-6969-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-09T21:07:03.239+07:00  INFO 7900 --- [http-nio-6969-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-04-09T21:07:04.361+07:00  INFO 7900 --- [http-nio-6969-exec-2] c.f.s.impl.AuthenticationServiceImpl     : Login SUCCESS
+2023-04-09T21:07:43.233+07:00 ERROR 7900 --- [http-nio-6969-exec-8] c.ff.exception.GlobalExceptionHandler    : 500 : IO Exception
+2023-04-09T21:07:43.239+07:00  WARN 7900 --- [http-nio-6969-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.fasterxml.jackson.core.JsonParseException: Unexpected character ('}' (code 125)): was expecting double-quote to start field name<EOL> at [Source: (String)"{<EOL><EOL>    "username":"",<EOL><EOL>    "email":"",<EOL><EOL>    "phone":"",<EOL><EOL>    "first_name":"",<EOL><EOL>    "last_name":"",<EOL><EOL>    "last_name":"",<EOL><EOL>    "address":"",<EOL><EOL>}"; line: 9, column: 2]]
+2023-04-09T21:08:04.023+07:00 ERROR 7900 --- [http-nio-6969-exec-5] c.ff.exception.GlobalExceptionHandler    : 400 : Incorrect usage of api
+2023-04-09T21:08:04.024+07:00  WARN 7900 --- [http-nio-6969-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.InvalidDataAccessApiUsageException: The given id must not be null]
+2023-04-09T21:08:12.222+07:00 ERROR 7900 --- [http-nio-6969-exec-7] c.ff.exception.GlobalExceptionHandler    : 400 : Incorrect usage of api
+2023-04-09T21:08:12.223+07:00  WARN 7900 --- [http-nio-6969-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.InvalidDataAccessApiUsageException: The given id must not be null]
+2023-04-09T21:08:27.636+07:00 ERROR 7900 --- [http-nio-6969-exec-9] c.ff.exception.GlobalExceptionHandler    : 400 : Incorrect usage of api
+2023-04-09T21:08:27.637+07:00  WARN 7900 --- [http-nio-6969-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.InvalidDataAccessApiUsageException: The given id must not be null]
+2023-04-09T21:09:01.399+07:00 ERROR 7900 --- [http-nio-6969-exec-1] c.ff.exception.GlobalExceptionHandler    : Could not write JSON: Cannot invoke "com.ff.entity.enum_pkg.RoleEntity.name()" because "this.role" is null : class org.springframework.http.converter.HttpMessageNotWritableException
+2023-04-09T21:09:01.401+07:00  WARN 7900 --- [http-nio-6969-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Cannot invoke "com.ff.entity.enum_pkg.RoleEntity.name()" because "this.role" is null]
+2023-04-09T21:11:39.554+07:00  INFO 7900 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-09T21:11:39.557+07:00  INFO 7900 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-09T21:11:41.570+07:00  INFO 7900 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-09T21:11:47.594+07:00  INFO 22056 --- [restartedMain] com.ff.FierceFashionsApplication         : Starting FierceFashionsApplication using Java 18.0.2.1 with PID 22056 (E:\Code(SpringBoot)\Repository\BackEnd-Fierce-Fashions\target\classes started by truonglam in E:\Code(SpringBoot)\Repository\BackEnd-Fierce-Fashions)
+2023-04-09T21:11:47.596+07:00  INFO 22056 --- [restartedMain] com.ff.FierceFashionsApplication         : No active profile set, falling back to 1 default profile: "default"
+2023-04-09T21:11:47.634+07:00  INFO 22056 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-09T21:11:47.634+07:00  INFO 22056 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-09T21:11:48.257+07:00  INFO 22056 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-09T21:11:48.312+07:00  INFO 22056 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 4 JPA repository interfaces.
+2023-04-09T21:11:48.772+07:00  INFO 22056 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 6969 (http)
+2023-04-09T21:11:48.773+07:00  INFO 22056 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.35] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.1]
+2023-04-09T21:11:48.773+07:00  INFO 22056 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-04-09T21:11:48.776+07:00  INFO 22056 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-04-09T21:11:48.784+07:00  INFO 22056 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-09T21:11:48.784+07:00  INFO 22056 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-04-09T21:11:48.836+07:00  INFO 22056 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-09T21:11:48.836+07:00  INFO 22056 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1201 ms
+2023-04-09T21:11:48.933+07:00  INFO 22056 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-09T21:11:48.989+07:00  INFO 22056 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-09T21:11:49.238+07:00  INFO 22056 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-09T21:11:51.321+07:00  INFO 22056 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@33db007c
+2023-04-09T21:11:51.322+07:00  INFO 22056 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-09T21:11:51.782+07:00  INFO 22056 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-04-09T21:11:59.818+07:00  INFO 22056 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-09T21:11:59.840+07:00  INFO 22056 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-09T21:12:00.513+07:00  WARN 22056 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-09T21:12:01.023+07:00  INFO 22056 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@78d5a0af, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1a3e795, org.springframework.security.web.context.SecurityContextHolderFilter@171d4e0e, org.springframework.security.web.header.HeaderWriterFilter@79fd62ec, com.ff.config.HeaderSettingFilter@2918bc40, org.springframework.security.web.authentication.logout.LogoutFilter@61770db7, com.ff.config.JwtAuthenticationFilter@76052d09, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@42a249eb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@622470c3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@52a25dd2, org.springframework.security.web.session.SessionManagementFilter@6a3176ae, org.springframework.security.web.access.ExceptionTranslationFilter@78f6f9ef, org.springframework.security.web.access.intercept.AuthorizationFilter@5e74ef77]
+2023-04-09T21:12:01.235+07:00  INFO 22056 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-09T21:12:01.267+07:00  INFO 22056 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 6969 (http) with context path ''
+2023-04-09T21:12:01.275+07:00  INFO 22056 --- [restartedMain] com.ff.FierceFashionsApplication         : Started FierceFashionsApplication in 14.03 seconds (process running for 14.969)
+2023-04-09T21:12:28.525+07:00  INFO 22056 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-09T21:12:28.527+07:00  INFO 22056 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-09T21:12:30.504+07:00  INFO 22056 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-09T21:12:39.825+07:00  INFO 3528 --- [restartedMain] com.ff.FierceFashionsApplication         : Starting FierceFashionsApplication using Java 18.0.2.1 with PID 3528 (E:\Code(SpringBoot)\Repository\BackEnd-Fierce-Fashions\target\classes started by truonglam in E:\Code(SpringBoot)\Repository\BackEnd-Fierce-Fashions)
+2023-04-09T21:12:39.830+07:00  INFO 3528 --- [restartedMain] com.ff.FierceFashionsApplication         : No active profile set, falling back to 1 default profile: "default"
+2023-04-09T21:12:39.960+07:00  INFO 3528 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-09T21:12:39.962+07:00  INFO 3528 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-09T21:12:41.922+07:00  INFO 3528 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-09T21:12:42.007+07:00  INFO 3528 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 4 JPA repository interfaces.
+2023-04-09T21:12:42.657+07:00  INFO 3528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 6969 (http)
+2023-04-09T21:12:42.658+07:00  INFO 3528 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.35] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.1]
+2023-04-09T21:12:42.660+07:00  INFO 3528 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-04-09T21:12:42.672+07:00  INFO 3528 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-04-09T21:12:42.688+07:00  INFO 3528 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-09T21:12:42.688+07:00  INFO 3528 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-04-09T21:12:42.775+07:00  INFO 3528 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-09T21:12:42.775+07:00  INFO 3528 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2812 ms
+2023-04-09T21:12:42.981+07:00  INFO 3528 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-09T21:12:43.087+07:00  INFO 3528 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-09T21:12:43.483+07:00  INFO 3528 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-09T21:12:45.638+07:00  INFO 3528 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@615c6e86
+2023-04-09T21:12:45.645+07:00  INFO 3528 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-09T21:12:46.115+07:00  INFO 3528 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-04-09T21:12:54.946+07:00  INFO 3528 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-09T21:12:54.975+07:00  INFO 3528 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-09T21:12:55.751+07:00  WARN 3528 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-09T21:12:56.668+07:00  INFO 3528 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@395544d4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5d603c88, org.springframework.security.web.context.SecurityContextHolderFilter@7f626d2a, org.springframework.security.web.header.HeaderWriterFilter@485161b7, com.ff.config.HeaderSettingFilter@2ef6192d, org.springframework.security.web.authentication.logout.LogoutFilter@60cd5a36, com.ff.config.JwtAuthenticationFilter@5c411021, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6122ecec, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@354504db, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7b13b932, org.springframework.security.web.session.SessionManagementFilter@4345cf94, org.springframework.security.web.access.ExceptionTranslationFilter@326faa93, org.springframework.security.web.access.intercept.AuthorizationFilter@5b27fec8]
+2023-04-09T21:12:57.038+07:00  INFO 3528 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-09T21:12:57.083+07:00  INFO 3528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 6969 (http) with context path ''
+2023-04-09T21:12:57.094+07:00  INFO 3528 --- [restartedMain] com.ff.FierceFashionsApplication         : Started FierceFashionsApplication in 18.044 seconds (process running for 20.025)
+2023-04-09T21:14:14.508+07:00  INFO 3528 --- [http-nio-6969-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-09T21:14:14.511+07:00  INFO 3528 --- [http-nio-6969-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-09T21:14:14.517+07:00  INFO 3528 --- [http-nio-6969-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2023-04-09T21:14:15.485+07:00 ERROR 3528 --- [http-nio-6969-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+java.lang.NullPointerException: Cannot invoke "com.ff.entity.enum_pkg.RoleEntity.name()" because "this.role" is null
+	at com.ff.entity.UserEntity.getAuthorities(UserEntity.java:86) ~[classes/:na]
+	at com.ff.config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:52) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.2.jar:6.0.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.0.2.jar:6.0.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.0.2.jar:6.0.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.2.jar:6.0.2]
+	at com.ff.config.HeaderSettingFilter.doFilterInternal(HeaderSettingFilter.java:23) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.2.jar:6.0.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.0.2.jar:6.0.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.0.2.jar:6.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.2.jar:6.0.2]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.0.2.jar:6.0.2]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.0.2.jar:6.0.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.2.jar:6.0.2]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.0.2.jar:6.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.2.jar:6.0.2]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.0.2.jar:6.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.2.jar:6.0.2]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.0.2.jar:6.0.2]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.0.2.jar:6.0.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-04-09T21:14:30.552+07:00  WARN 3528 --- [http-nio-6969-exec-4] c.f.s.impl.AuthenticationServiceImpl     : INVALID_USERNAME_OR_PASSWORD
+2023-04-09T21:15:49.005+07:00  INFO 3528 --- [http-nio-6969-exec-7] c.f.s.impl.AuthenticationServiceImpl     : Login SUCCESS
+2023-04-09T21:16:03.511+07:00 ERROR 3528 --- [http-nio-6969-exec-8] c.ff.exception.GlobalExceptionHandler    : No value present : class java.util.NoSuchElementException
+2023-04-09T21:16:03.520+07:00  WARN 3528 --- [http-nio-6969-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.util.NoSuchElementException: No value present]
+2023-04-09T21:16:37.927+07:00  INFO 3528 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-09T21:16:37.931+07:00  INFO 3528 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-09T21:16:39.933+07:00  INFO 3528 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-09T21:16:52.413+07:00  INFO 26540 --- [restartedMain] com.ff.FierceFashionsApplication         : Starting FierceFashionsApplication using Java 18.0.2.1 with PID 26540 (E:\Code(SpringBoot)\Repository\BackEnd-Fierce-Fashions\target\classes started by truonglam in E:\Code(SpringBoot)\Repository\BackEnd-Fierce-Fashions)
+2023-04-09T21:16:52.420+07:00  INFO 26540 --- [restartedMain] com.ff.FierceFashionsApplication         : No active profile set, falling back to 1 default profile: "default"
+2023-04-09T21:16:52.627+07:00  INFO 26540 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-09T21:16:52.629+07:00  INFO 26540 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-09T21:16:55.216+07:00  INFO 26540 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-09T21:16:55.389+07:00  INFO 26540 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 165 ms. Found 4 JPA repository interfaces.
+2023-04-09T21:16:56.315+07:00  INFO 26540 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 6969 (http)
+2023-04-09T21:16:56.316+07:00  INFO 26540 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.35] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.1]
+2023-04-09T21:16:56.316+07:00  INFO 26540 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-04-09T21:16:56.319+07:00  INFO 26540 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-04-09T21:16:56.330+07:00  INFO 26540 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-09T21:16:56.330+07:00  INFO 26540 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-04-09T21:16:56.403+07:00  INFO 26540 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-09T21:16:56.404+07:00  INFO 26540 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3771 ms
+2023-04-09T21:16:56.526+07:00  INFO 26540 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-09T21:16:56.608+07:00  INFO 26540 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-09T21:16:56.992+07:00  INFO 26540 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-09T21:16:59.257+07:00  INFO 26540 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1f98071c
+2023-04-09T21:16:59.259+07:00  INFO 26540 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-09T21:17:00.166+07:00  INFO 26540 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-04-09T21:17:08.428+07:00  INFO 26540 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-09T21:17:08.449+07:00  INFO 26540 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-09T21:17:09.304+07:00  WARN 26540 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-09T21:17:10.037+07:00  INFO 26540 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7b5facff, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4605462a, org.springframework.security.web.context.SecurityContextHolderFilter@623de8a0, org.springframework.security.web.header.HeaderWriterFilter@5f2a7bc5, com.ff.config.HeaderSettingFilter@3c5e6b54, org.springframework.security.web.authentication.logout.LogoutFilter@259f40c, com.ff.config.JwtAuthenticationFilter@4582f909, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@326faa93, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7b08c97e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5bb486eb, org.springframework.security.web.session.SessionManagementFilter@7c51269b, org.springframework.security.web.access.ExceptionTranslationFilter@331f99f0, org.springframework.security.web.access.intercept.AuthorizationFilter@e76623c]
+2023-04-09T21:17:10.437+07:00  INFO 26540 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-09T21:17:10.510+07:00  INFO 26540 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 6969 (http) with context path ''
+2023-04-09T21:17:10.522+07:00  INFO 26540 --- [restartedMain] com.ff.FierceFashionsApplication         : Started FierceFashionsApplication in 19.543 seconds (process running for 21.686)
+2023-04-09T21:17:11.496+07:00  INFO 26540 --- [http-nio-6969-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-09T21:17:11.496+07:00  INFO 26540 --- [http-nio-6969-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-09T21:17:11.497+07:00  INFO 26540 --- [http-nio-6969-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-04-09T21:17:12.602+07:00  INFO 26540 --- [http-nio-6969-exec-1] c.f.s.impl.AuthenticationServiceImpl     : Login SUCCESS
+2023-04-09T21:19:06.807+07:00  INFO 26540 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-09T21:19:06.820+07:00  INFO 26540 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-09T21:19:08.815+07:00  INFO 26540 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

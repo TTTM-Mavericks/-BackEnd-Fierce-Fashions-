@@ -71,6 +71,16 @@ public class UserEntity implements UserDetails {
         this.status_account = Status.ACTIVE;
     }
 
+    public UserEntity(String username, String email, String phone, String first_name, String last_name, String address, String password) {
+        this.username = username;
+        this.email = email;
+        this.phone = phone;
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.address = address;
+        this.password = password;
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return Collections.singleton(new SimpleGrantedAuthority("ROLE_" + role.name()));

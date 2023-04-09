@@ -45,4 +45,13 @@ public class OrderEntity {
 
     @OneToOne(mappedBy = "payment_order")
     private PaymentEntity order_payment;
+
+    public OrderEntity(UserEntity userList, Date orderDate, String shipAddress, Status status_Order, Double totalPrice, List<OrderDetailsEntity> orderDetailsList) {
+        this.userList = userList;
+        this.orderDate = orderDate;
+        this.shipAddress = shipAddress;
+        this.status_Order = status_Order;
+        this.totalPrice = totalPrice;
+        this.orderDetailsList = orderDetailsList;
+    }
 }
