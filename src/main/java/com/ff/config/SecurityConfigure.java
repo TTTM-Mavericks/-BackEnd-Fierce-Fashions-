@@ -1,6 +1,8 @@
 package com.ff.config;
 
+import com.ff.entity.enum_pkg.RoleEntity;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpMethod;
 import org.springframework.web.filter.CorsFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -30,10 +32,14 @@ public class SecurityConfigure {
                 .authorizeHttpRequests()
                 .requestMatchers("/auth/**")
                 .permitAll()
-                .requestMatchers("/swagger-ui/**")
-                .permitAll()
+                .requestMatchers("/manageProduct/**").hasAnyRole(RoleEntity.ADMIN.name(), RoleEntity.PRODUCT_MANAGER.name())
+                .requestMatchers("/manageOrder/**").hasRole(RoleEntity.ADMIN.name())
+                .requestMatchers("/manageCategory/**").hasAnyRole(RoleEntity.ADMIN.name(), RoleEntity.PRODUCT_MANAGER.name())
+                .requestMatchers("/manageCustomer/**").hasRole(RoleEntity.ADMIN.name())
+                .requestMatchers("/product").hasAnyRole(RoleEntity.CONTENT.name(), RoleEntity.ADMIN.name(), RoleEntity.CUSTOMER.name(), RoleEntity.MODERATOR.name(), RoleEntity.SHIPPER.name(), RoleEntity.PRODUCT_MANAGER.name())
+                .requestMatchers("/user").hasAnyRole(RoleEntity.CONTENT.name(), RoleEntity.ADMIN.name(), RoleEntity.CUSTOMER.name(), RoleEntity.MODERATOR.name(), RoleEntity.SHIPPER.name(), RoleEntity.PRODUCT_MANAGER.name())
                 .anyRequest()
-                .authenticated()
+                .permitAll()
                 .and()
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
