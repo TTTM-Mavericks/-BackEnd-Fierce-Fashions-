@@ -1,7 +1,5 @@
 package com.ff.controller;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ff.entity.ProductEntity;
 import com.ff.service.ProductService;
 import jakarta.validation.constraints.NotBlank;
@@ -14,10 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
-import java.util.Date;
 
 @RestController
 @RequestMapping("/manageProduct")
@@ -25,7 +20,7 @@ public class ManageProductController {
     @Autowired
     ProductService productService;
 
-    private static final ObjectMapper objectMapper = new ObjectMapper();
+//    private static final ObjectMapper objectMapper = new ObjectMapper();
 
 //    @PostMapping("/addNewProduct")
 //    public ResponseEntity<ProductEntity> addNewProduct(@RequestBody String json) throws JsonProcessingException {
@@ -51,10 +46,10 @@ public class ManageProductController {
 //    }
 
     @PostMapping("/addNewProduct")
-    public ResponseEntity<ProductEntity> addNewProduct(@RequestParam("name") @NotBlank String name,
-                                                       @RequestParam("description") @NotBlank String description,
-                                                       @RequestParam("price") @Positive Double price,
-                                                       @RequestParam("quantity") @PositiveOrZero Long quantity,
+    public ResponseEntity<ProductEntity> addNewProduct(@RequestParam("name") @NotBlank(message = "Name is required.") String name,
+                                                       @RequestParam("description") @NotBlank(message = "Description is required.") String description,
+                                                       @RequestParam("price") @Positive(message = "Price must be positive.") Double price,
+                                                       @RequestParam("quantity") @PositiveOrZero(message = "Quantity must be positive or zero.") Long quantity,
                                                        @RequestParam("image") MultipartFile file) throws IOException {
 
         if (file == null || file.isEmpty()) {
