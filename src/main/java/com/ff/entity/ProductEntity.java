@@ -54,4 +54,13 @@ public class ProductEntity {
         this.updatedDate = updatedDate;
         this.status_product = Status.ACTIVE;
     }
+
+    public ProductEntity(String name, String description, Double price, Long quantity, byte[] image) {
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.quantity = quantity;
+        this.image = image;
+        this.status_product = Status.ACTIVE;
+    }
 }

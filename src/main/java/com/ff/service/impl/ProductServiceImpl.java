@@ -4,6 +4,9 @@ import com.ff.entity.CategoryEntity;
 import com.ff.entity.ProductEntity;
 import com.ff.repository.ProductRepository;
 import com.ff.service.ProductService;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+import jakarta.persistence.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,9 +16,20 @@ import java.util.List;
 public class ProductServiceImpl implements ProductService {
     @Autowired
     ProductRepository productRepository;
+    @PersistenceContext
+    private EntityManager entityManager;
+
+    //    public ProductEntity addNewProduct(ProductEntity product) {
+//        return productRepository.save(product);
+//    }
     @Override
     public ProductEntity addNewProduct(ProductEntity product) {
-        return productRepository.save(product);
+        productRepository.insertProduct(product.getName(),
+                product.getDescription(),
+                product.getPrice(),
+                product.getQuantity(),
+                product.getImage());
+        return product;
     }
 
     @Override
