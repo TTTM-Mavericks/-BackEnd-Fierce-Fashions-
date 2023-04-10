@@ -6,6 +6,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.sql.rowset.serial.SerialBlob;
+import java.sql.Blob;
+import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -25,7 +28,7 @@ public class ProductEntity {
     private Long quantity;
 
     @Lob
-    @Column(columnDefinition = "bytea")
+    @Column(columnDefinition = "oid")
     private byte[] image;
 
     private LocalDateTime createdDate;
@@ -64,3 +67,4 @@ public class ProductEntity {
         this.status_product = Status.ACTIVE;
     }
 }
+

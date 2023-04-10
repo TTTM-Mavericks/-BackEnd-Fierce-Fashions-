@@ -24,12 +24,14 @@ public class ProductServiceImpl implements ProductService {
 //    }
     @Override
     public ProductEntity addNewProduct(ProductEntity product) {
-        productRepository.insertProduct(product.getName(),
-                product.getDescription(),
-                product.getPrice(),
-                product.getQuantity(),
-                product.getImage());
-        return product;
+//        productRepository.insertProduct(
+//                productRepository.count() + 1,
+//                product.getName(),
+//                product.getDescription(),
+//                product.getPrice(),
+//                product.getQuantity(),
+//                product.getImage());
+        return productRepository.save(product);
     }
 
     @Override

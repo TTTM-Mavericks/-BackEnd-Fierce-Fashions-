@@ -1,6 +1,7 @@
 package com.ff.controller;
 
 import com.ff.entity.ProductEntity;
+import com.ff.repository.ProductRepository;
 import com.ff.service.ProductService;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Positive;
@@ -45,6 +46,8 @@ public class ManageProductController {
 //        return new ResponseEntity<>(productService.addNewProduct(product), HttpStatus.OK);
 //    }
 
+    @Autowired
+    ProductRepository productRepository;
     @PostMapping("/addNewProduct")
     public ResponseEntity<ProductEntity> addNewProduct(@RequestParam("name") @NotBlank(message = "Name is required.") String name,
                                                        @RequestParam("description") @NotBlank(message = "Description is required.") String description,
@@ -62,7 +65,15 @@ public class ManageProductController {
 
         byte[] imageBytes = file.getBytes();
         ProductEntity product = new ProductEntity(name, description, price, quantity, imageBytes);
-
+//        productRepository.insertProduct(
+//                productRepository.count() + 1,
+//                product.getName(),
+//                product.getDescription(),
+//                product.getPrice(),
+//                product.getQuantity(),
+//                product.getImage());
+//
+//        return new ResponseEntity<>(product, HttpStatus.OK);
         return new ResponseEntity<>(productService.addNewProduct(product), HttpStatus.OK);
     }
 
