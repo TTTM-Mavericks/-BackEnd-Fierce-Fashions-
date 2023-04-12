@@ -27,12 +27,8 @@ public class CategoryEntity {
     // one category has many product
     @ManyToMany
     @JoinTable(name = "product_cate",
-            joinColumns = @JoinColumn(name = "cate_id",
-                    referencedColumnName = "id",
-                    table = "category"),
-            inverseJoinColumns = @JoinColumn (name = "product_id",
-                    referencedColumnName = "id",
-                    table = "products")
+            joinColumns = @JoinColumn(name = "cate_id"),
+            inverseJoinColumns = @JoinColumn (name = "product_id")
     )
     List<ProductEntity> product_cate;
 

@@ -27,13 +27,17 @@ public class ProductServiceImpl implements ProductService {
 //    }
     @Override
     public ProductEntity addNewProduct(ProductEntity product, List<String> cateList) {
-        for (String cateName:cateList) {
-            CategoryEntity category = categoryRepository.findByname(cateName);
-            category.getProduct_cate().add(product);
-            categoryRepository.save(category);
-            product.getCategoryList().add(category);
-        }
-        return productRepository.save(product);
+        productRepository.save(product);
+        if (cateList != null)
+            for (String cateName : cateList) {
+                if (cateName != null && !cateName.isEmpty() && !cateName.isBlank()) {
+                    CategoryEntity category = categoryRepository.findCateByName(cateName);
+                    if(category != null) {
+                        productRepository.updateCate(product.getId(), category.getId());
+                    }
+                }
+            }
+        return product;
     }
 
     @Override

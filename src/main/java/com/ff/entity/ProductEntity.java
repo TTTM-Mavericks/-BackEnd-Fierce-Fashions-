@@ -65,7 +65,21 @@ public class ProductEntity {
         this.status_product=Status.ACTIVE;
     }
 
-//    public ProductEntity(String name, String title, String description, Double price, Long quantity, byte[] image, Date createdDate, Date updatedDate, Double rate) {
+    public ProductEntity(String name, String title, String description, Double price, Long quantity, byte[] image, Date createdDate, Date updatedDate, Status status_product, Double rate, List<CategoryEntity> categoryList) {
+        this.name = name;
+        this.title = title;
+        this.description = description;
+        this.price = price;
+        this.quantity = quantity;
+        this.image = image;
+        this.createdDate = createdDate;
+        this.updatedDate = updatedDate;
+        this.status_product = status_product;
+        this.rate = rate;
+        this.categoryList = categoryList;
+    }
+
+    //    public ProductEntity(String name, String title, String description, Double price, Long quantity, byte[] image, Date createdDate, Date updatedDate, Double rate) {
 //        this.name = name;
 //        this.title = title;
 //        this.description = description;

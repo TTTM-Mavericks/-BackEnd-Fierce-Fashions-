@@ -15,6 +15,11 @@ public interface ProductRepository extends JpaRepository<ProductEntity, Long> {
             "JOIN p.categoryList c WHERE c.name = ?1", nativeQuery = true)
     List<ProductEntity> findByCategory(String cateName);
 
+    @Query(
+            value = "insert into product_cate values (?1, ?2)", nativeQuery = true
+    )
+    Void updateCate(Long product_id, Long cate_id);
+
 //    @Modifying
 //    @Query(value = "INSERT INTO products (id, name, description, price, quantity, image) " +
 //            "VALUES (:name, :description, :price, :quantity, CAST(:image AS bytea))", nativeQuery = true)

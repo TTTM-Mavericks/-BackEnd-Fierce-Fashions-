@@ -19,7 +19,7 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public CategoryEntity removeCategory(String name) {
-        CategoryEntity category = categoryRepository.findByname(name);
+        CategoryEntity category = categoryRepository.findCategoryEntityByName(name);
         if (category == null)
             return null;
         else {
