@@ -14,16 +14,12 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public CategoryEntity addNewCategory(CategoryEntity category) {
-        CategoryEntity checkCate = categoryRepository.findByName(category.getName());
-        if (checkCate == null)
-            return categoryRepository.save(category);
-        else
-            return null;
+        return categoryRepository.save(category);
     }
 
     @Override
     public CategoryEntity removeCategory(String name) {
-        CategoryEntity category = categoryRepository.findByName(name);
+        CategoryEntity category = categoryRepository.findByname(name);
         if (category == null)
             return null;
         else {

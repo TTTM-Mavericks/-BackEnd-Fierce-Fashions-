@@ -10,6 +10,7 @@ import javax.sql.rowset.serial.SerialBlob;
 import java.sql.Blob;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 @Data
@@ -23,6 +24,7 @@ public class ProductEntity {
     private Long id;
 
     private String name;
+    private String title;
     private String description;
     private Double price;
     private Long quantity;
@@ -31,8 +33,11 @@ public class ProductEntity {
     @Column(columnDefinition = "oid")
     private byte[] image;
 
-    private LocalDateTime createdDate;
-    private LocalDateTime updatedDate;
+    @Temporal(TemporalType.DATE)
+    private Date createdDate;
+
+    @Temporal(TemporalType.DATE)
+    private Date updatedDate;
 
     @Enumerated(EnumType.STRING)
     private Status status_product;
@@ -47,24 +52,29 @@ public class ProductEntity {
     @OneToMany(mappedBy = "product_detail")
     List<OrderDetailsEntity> details;
 
-    public ProductEntity(String name, String description, Double price, Long quantity, byte[] image, LocalDateTime createdDate, LocalDateTime updatedDate) {
+    public ProductEntity(String name, String title, String description, Double price, Long quantity, byte[] image, Date createdDate, Date updatedDate, Double rate) {
         this.name = name;
+        this.title = title;
         this.description = description;
         this.price = price;
         this.quantity = quantity;
         this.image = image;
         this.createdDate = createdDate;
         this.updatedDate = updatedDate;
-        this.status_product = Status.ACTIVE;
+        this.rate = rate;
+        this.status_product=Status.ACTIVE;
     }
 
-    public ProductEntity(String name, String description, Double price, Long quantity, byte[] image) {
-        this.name = name;
-        this.description = description;
-        this.price = price;
-        this.quantity = quantity;
-        this.image = image;
-        this.status_product = Status.ACTIVE;
-    }
+//    public ProductEntity(String name, String title, String description, Double price, Long quantity, byte[] image, Date createdDate, Date updatedDate, Double rate) {
+//        this.name = name;
+//        this.title = title;
+//        this.description = description;
+//        this.price = price;
+//        this.quantity = quantity;
+//        this.image = image;
+//        this.createdDate = createdDate;
+//        this.updatedDate = updatedDate;
+//        this.rate = rate;
+//    }
 }
 

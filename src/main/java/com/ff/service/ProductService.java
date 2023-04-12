@@ -5,7 +5,7 @@ import com.ff.entity.ProductEntity;
 import java.util.List;
 
 public interface ProductService {
-    ProductEntity addNewProduct(ProductEntity product);
+    ProductEntity addNewProduct(ProductEntity product, List<String> cateList);
     ProductEntity removeProduct(String productName);
     List<ProductEntity> listAllProduct();
     ProductEntity findByName(String name);

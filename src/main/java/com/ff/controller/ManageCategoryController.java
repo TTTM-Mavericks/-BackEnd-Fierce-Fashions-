@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 @RequestMapping("/manageCategory")
@@ -16,9 +17,17 @@ public class ManageCategoryController {
     CategoryService categoryService;
 
     private static final ObjectMapper objectMapper = new ObjectMapper();
+//    @PostMapping("/addNewCategory")
+//    public ResponseEntity<CategoryEntity> addNewCategory(@RequestBody String json) throws JsonProcessingException {
+//        CategoryEntity category = objectMapper.readValue(json, CategoryEntity.class);
+//        return new ResponseEntity<>(categoryService.addNewCategory(category), HttpStatus.OK);
+//    }
+
     @PostMapping("/addNewCategory")
-    public ResponseEntity<CategoryEntity> addNewCategory(@RequestBody String json) throws JsonProcessingException {
-        CategoryEntity category = objectMapper.readValue(json, CategoryEntity.class);
+    public ResponseEntity<CategoryEntity> addNewCategory(@RequestParam("name") String name,
+                                                         @RequestParam("image") MultipartFile file ) throws Exception {
+        byte[] imageBytes = file.getBytes();
+        CategoryEntity category = new CategoryEntity(name, imageBytes);
         return new ResponseEntity<>(categoryService.addNewCategory(category), HttpStatus.OK);
     }
 

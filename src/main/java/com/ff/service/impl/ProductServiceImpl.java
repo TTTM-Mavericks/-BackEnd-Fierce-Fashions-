@@ -2,6 +2,7 @@ package com.ff.service.impl;
 
 import com.ff.entity.CategoryEntity;
 import com.ff.entity.ProductEntity;
+import com.ff.repository.CategoryRepository;
 import com.ff.repository.ProductRepository;
 import com.ff.service.ProductService;
 import jakarta.persistence.EntityManager;
@@ -16,6 +17,8 @@ import java.util.List;
 public class ProductServiceImpl implements ProductService {
     @Autowired
     ProductRepository productRepository;
+    @Autowired
+    CategoryRepository categoryRepository;
     @PersistenceContext
     private EntityManager entityManager;
 
@@ -23,14 +26,13 @@ public class ProductServiceImpl implements ProductService {
 //        return productRepository.save(product);
 //    }
     @Override
-    public ProductEntity addNewProduct(ProductEntity product) {
-//        productRepository.insertProduct(
-//                productRepository.count() + 1,
-//                product.getName(),
-//                product.getDescription(),
-//                product.getPrice(),
-//                product.getQuantity(),
-//                product.getImage());
+    public ProductEntity addNewProduct(ProductEntity product, List<String> cateList) {
+        for (String cateName:cateList) {
+            CategoryEntity category = categoryRepository.findByname(cateName);
+            category.getProduct_cate().add(product);
+            categoryRepository.save(category);
+            product.getCategoryList().add(category);
+        }
         return productRepository.save(product);
     }
 
